@@ -15,12 +15,12 @@ from src.algorithms.frequent_counter import FrequentCounter
 DATASET_PATH: str = "data/amazon_prime_titles.csv"
 MORRIS_TRIALS: int = 20  # Number of runs to smooth out variance
 FREQUENT_CAPACITIES: List[int] = [100, 500, 1000, 2500, 3500, 44000]  # Different 'k' values for memory testing
-DISPLAY_TOP_N: int = 15  # Number of top items to display in reports
+DISPLAY_TOP_N: int = 15  # Number of top items
 
 
 def print_section_header(title: str) -> None:
     """
-    Utility function to print formatted section headers for the report.
+    Utility function to print formatted section headers
     """
     print(f"\n{'=' * 100}")
     print(f" {title}")
@@ -89,7 +89,7 @@ def run_morris_experiment(loader: DatasetLoader,
 
     print(" Done.")
 
-    # --- Generate Report Table ---
+    # --- Generate Table ---
     print("\n[Table 1] Accuracy of Approximate Counter (Morris 1/2^k)")
     print(
         f"{'Rank':<4} | {'Actor':<25} | {'Real':<6} | {'Avg (Est)':<12} | {'Rel Err %':<10} | {'Min':<6} | {'Max':<6}")

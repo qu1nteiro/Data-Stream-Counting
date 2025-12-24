@@ -24,7 +24,7 @@ class MorrisCounter(BaseCounter):
     def process(self, item: str) -> None:
         if item not in self.counts:
             # Initial state: k=0.
-            # Note: exact count 1 corresponds to k=1 (since 2^1 - 1 = 1).
+            # Exact count 1 corresponds to k=1 (since 2^1 - 1 = 1).
             # So the first update (from 0 to 1) should happen with prob 1/2^0 = 1.
             self.counts[item] = 0
 

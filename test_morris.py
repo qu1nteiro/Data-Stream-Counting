@@ -18,7 +18,6 @@ def run_test():
         loader = DatasetLoader(csv_path)
 
         # 1. Obter a 'Ground Truth' (Verdade Absoluta)
-        # Precisamos disto para saber se o Morris está a mentir ou não.
         print("1. Calculating exact counters (Baseline)...")
         exact = ExactCounter()
         # Consumimos o stream uma vez
@@ -45,7 +44,7 @@ def run_test():
         print(f"{'Rank':<5} | {'Actor (Exact)':<30} | {'Real':<10} | {'Morris (Est)':<15} | {'Rel Error':<10}")
         print("-" * 85)
 
-        # Vamos iterar sobre o Top 10 REAL e ver quanto o Morris marcou para eles
+        # Iterar sobre o Top 10 REAL e ver quanto o Morris marcou para eles
         for rank, (actor, real_count) in enumerate(top_exact, 1):
             est_count = morris.query(actor)
 

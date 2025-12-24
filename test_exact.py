@@ -7,7 +7,7 @@ import time
 sys.path.append(os.getcwd())
 
 from src.data_loader import DatasetLoader
-# Nota o caminho completo agora: src.algorithms.exact_counter
+# o caminho completo
 from src.algorithms.exact_counter import ExactCounter
 
 
